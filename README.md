@@ -4,6 +4,7 @@ SAFE SHOE: A Smart Women’s Safety System
       SAFE SHOE is an AI-powered smart shoe system that combines IoT sensors, mobile application, emergency alerts, and Gemini AI integration to provide a proactive and real-time safety solution for women.
 
 TEAM MEMBERS
+
 Akshaya N
 
 Harismita B
