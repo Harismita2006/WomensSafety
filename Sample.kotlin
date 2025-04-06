@@ -1,0 +1,44 @@
+import android.os.Bundle
+import android.util.Log
+import androidx.appcompat.app.AppCompatActivity
+import com.google.ai.client.generativelanguage.v1.*
+import com.google.ai.client.generativelanguage.v1.api.GenerativeLanguageClient
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+
+class GeminiActivity : AppCompatActivity() {
+
+    private val TAG = "GeminiDemo"
+    private val apiKey = "YOUR_GEMINI_API_KEY" // Replace with your actual Gemini API Key
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+
+        generateSafetyTip()
+    }
+
+    private fun generateSafetyTip() {
+        CoroutineScope(Dispatchers.IO).launch {
+            try {
+                val client = GenerativeLanguageClient.create()
+                val prompt = "Give me a short safety tip for women traveling alone at night."
+
+                val request = GenerateTextRequest.newBuilder()
+                    .setModel("models/text-bison-001")
+                    .setPrompt(TextPrompt.newBuilder().setText(prompt).build())
+                    .build()
+
+                val response = client.generateText(request)
+                val resultText = response.candidatesList.firstOrNull()?.output ?: "No response"
+
+                Log.d(TAG, "Generated Tip: $resultText")
+                // You can display this in a TextView or AlertDialog
+
+            } catch (e: Exception) {
+                Log.e(TAG, "Error: ${e.localizedMessage}")
+            }
+        }
+    }
+}
