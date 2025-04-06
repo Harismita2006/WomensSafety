@@ -1,8 +1,8 @@
 #include <WiFi.h>
 #include <HTTPClient.h>
 
-const char* ssid = "YourWiFi";
-const char* password = "YourPassword";
+const char* ssid = "AHR";
+const char* password = "AHR@2006";
 
 const char* firebaseURL = "https://your-firebase-project.firebaseio.com/alerts.json";
 
