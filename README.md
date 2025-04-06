@@ -5,7 +5,9 @@ SAFE SHOE: A Smart Women’s Safety System
 
 TEAM MEMBERS
 Akshaya N
+
 Harismita B
+
 Riyas Rahman A
 
 OBJECTIVE
@@ -63,37 +65,67 @@ FILE STRUCTURE
 
 smart-shoe/
 │
+
 ├── hardware/
+
 │   └── esp32_code/
+
 │       ├── main.ino
+
 │       └── firebase_config.h
+
 │
+
 ├── android-app/
+
 │   ├── app/
+
 │   │   ├── src/
+
 │   │   │   ├── main/
+
 │   │   │   │   ├── java/
+
 │   │   │   │   │   └── com.example.safeshoe/
+
 │   │   │   │   │       ├── MainActivity.kt
+
 │   │   │   │   │       ├── AlertListener.kt
+
 │   │   │   │   │       └── GeminiHelper.kt
+
 │   │   │   │   ├── res/
+
 │   │   │   │   │   └── layout/
+
 │   │   │   │   │       └── activity_main.xml
+
 │   │   │   │   └── AndroidManifest.xml
+
 │   └── build.gradle
+
 │
+
 ├── images/
+
 │   ├── architecture_diagram.png
+
 │   └── prototype_snapshots.png
+
 │
+
 ├── README.md
+
 
 REFERENCES
 https://firebase.google.com/docs
+
 https://ai.google.dev/
+
 https://developer.android.com/
+
 https://www.arduino.cc/
+
 https://mapsplatform.google.com/
 
 
