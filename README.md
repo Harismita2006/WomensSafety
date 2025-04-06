@@ -118,6 +118,7 @@ smart-shoe/
 
 
 REFERENCES
+
 https://firebase.google.com/docs
 
 https://ai.google.dev/
